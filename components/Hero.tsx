@@ -28,13 +28,13 @@ export function Hero() {
         </div>
 
         {/* Title */}
-        <h1 className="text-6xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
+        <h1 className="text-2xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
           Crée des applications métier et SaaS <br />
           <span className="text-gradient italic">sur-mesure pour les PME et les startups</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-md text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Spécialisé en <span className="text-white font-medium">Next.js</span> et <span className="text-white font-medium">IA</span>,
           j'aide les entreprises à gagner du temps. Automatisez vos processus et réduisez vos coûts avec des outils métiers performants.
         </p>
