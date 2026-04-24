@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Terminal, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ContactButton } from "./ContactButton";
 
 /**
  * Navbar Component
@@ -27,9 +28,8 @@ export function Navbar() {
           <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
           <Link href="#projects" className="hover:text-primary transition-colors">Projets</Link>
           <Link href="#about" className="hover:text-primary transition-colors">À propos</Link>
-          <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
-            Me contacter
-          </Button>
+          <Link href="#testimonials" className="hover:text-primary transition-colors">Avis</Link>
+          <ContactButton size="sm" className="rounded-full px-6" />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -47,9 +47,7 @@ export function Navbar() {
           <Link href="#services" className="text-lg font-medium hover:text-primary" onClick={() => setIsOpen(false)}>Services</Link>
           <Link href="#projects" className="text-lg font-medium hover:text-primary" onClick={() => setIsOpen(false)}>Projets</Link>
           <Link href="#about" className="text-lg font-medium hover:text-primary" onClick={() => setIsOpen(false)}>À propos</Link>
-          <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl mt-2">
-            Me contacter
-          </Button>
+          <ContactButton className="w-full rounded-xl mt-2" onClick={() => setIsOpen(false)} />
         </div>
       )}
     </nav>

@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MessageSquare, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ContactButton } from "./ContactButton";
 
 /**
  * Hero Section
@@ -40,29 +41,38 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-xl px-8 h-12 text-base gap-3 glow-primary transition-all hover:scale-105">
-            <MessageSquare className="w-5 h-5" /> Discuter de votre projet
-          </Button>
+          <ContactButton size="lg" showIcon className="rounded-xl px-8 h-12 text-base glow-primary">
+            Discuter de votre projet
+          </ContactButton>
           <Button size="lg" variant="outline" className="rounded-xl px-8 h-12 text-base border-white/10 hover:bg-white/5 transition-all group">
-            En savoir plus <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <a href="#services" className="flex flex-row justify-center items-center gap-4">
+              En savoir plus <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
 
-        {/* Mockup */}
-        <div className="relative pt-12 animate-in fade-in zoom-in-95 duration-1000 delay-300">
-          <div className="glass rounded-2xl p-2 sm:p-4 border border-white/10 shadow-2xl relative">
-            <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-transparent opacity-20 rounded-2xl" />
-            <img
-              src="/hero-dashboard.png"
-              alt="Dashboard Mockup"
-              className="w-full h-auto rounded-xl shadow-inner border border-white/5"
-            />
-          </div>
+      </div>
 
-          {/* Decorative floating elements */}
-          <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent/20 blur-3xl rounded-full" />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full" />
+      {/* Mockup - Wider than the text container */}
+      <div className="max-w-6xl mx-auto mt-20 relative animate-in fade-in zoom-in-95 duration-1000 delay-300">
+        <div className="glass rounded-3xl p-2 sm:p-4 border border-white/10 shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-transparent opacity-20" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-auto rounded-2xl shadow-inner border border-white/5 object-cover relative z-10"
+          >
+            <source src="/assets/video_portfolio.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
         </div>
+
+        {/* Decorative floating elements */}
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/20 blur-3xl rounded-full" />
+        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-primary/20 blur-3xl rounded-full" />
       </div>
     </section>
   );

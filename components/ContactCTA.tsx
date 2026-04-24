@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Mail, MessageSquare, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
+import { ContactButton } from "./ContactButton";
 
 /**
  * ContactCTA Section
@@ -25,9 +26,9 @@ export function ContactCTA() {
         </div>
 
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-10 h-10 text-base gap-3 glow-primary transition-all hover:scale-105">
-            <MessageSquare className="w-6 h-6" /> Parlons-en
-          </Button>
+          <ContactButton size="lg" showIcon className="rounded-full px-10 h-10 text-base glow-primary">
+            Parlons-en
+          </ContactButton>
           <Button size="lg" variant="outline" className="rounded-full px-10 h-10 text-base gap-3" >
             <Mail className="w-6 h-6" /> Me contacter par email
           </Button>

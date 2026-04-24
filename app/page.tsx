@@ -7,7 +7,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { About } from "@/components/About";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactCTA } from "@/components/ContactCTA";
-import { ScrollReveal } from "@/components/ScrollReveal";
+
 
 export const metadata: Metadata = {
   title: "Développeur Full-Stack Next.js & Solutions IA | Portfolio Premium",
@@ -38,14 +38,15 @@ export default function Home() {
       <Testimonials />
       <ContactCTA />
 
+
       {/* Footer simple */}
       <footer className="py-12 px-4 sm:px-8 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-muted-foreground text-sm">
           <p>© {new Date().getFullYear()} AbdoulDev. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-primary transition-colors">GitHub</a>
-            <a href="#" className="hover:text-primary transition-colors">Twitter</a>
+            <a href="https://www.linkedin.com/in/abdou-matinou-alassane-267516400/" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://github.com/alassaneabdoulmatine-cloud" className="hover:text-primary transition-colors">GitHub</a>
+            <a href="https://www.facebook.com/abdoul.matine.346727/" className="hover:text-primary transition-colors">facebook</a>
           </div>
         </div>
       </footer>
