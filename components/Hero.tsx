@@ -40,7 +40,7 @@ export function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
           <ContactButton size="lg" showIcon className="rounded-xl px-8 h-12 text-base glow-primary">
             Discuter de votre projet
           </ContactButton>
@@ -54,7 +54,7 @@ export function Hero() {
       </div>
 
       {/* Mockup - Wider than the text container */}
-      <div className="max-w-6xl mx-auto mt-20 relative animate-in fade-in zoom-in-95 duration-1000 delay-300">
+      <div className="max-w-6xl mx-auto mt-12 relative animate-in fade-in zoom-in-95 duration-1000 delay-300">
         <div className="glass rounded-3xl p-2 sm:p-4 border border-white/10 shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-transparent opacity-20" />
           <video
