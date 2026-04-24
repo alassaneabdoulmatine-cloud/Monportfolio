@@ -68,7 +68,7 @@ export function Portfolio() {
 
           <div className="flex gap-2 p-1 glass rounded-xl w-fit">
             <Button
-              variant={filter === "all" ? "primary" : "ghost"}
+
               size="sm"
               onClick={() => setFilter("all")}
               className={`rounded-lg cursor-pointer ${filter === "all" ? "bg-primary text-primary-foreground" : ""}`}
@@ -76,7 +76,7 @@ export function Portfolio() {
               Tous
             </Button>
             <Button
-              variant={filter === "app" ? "primary" : "ghost"}
+
               size="sm"
               onClick={() => setFilter("app")}
               className={`rounded-lg gap-2 cursor-pointer ${filter === "app" ? "bg-primary text-primary-foreground" : ""}`}
@@ -84,7 +84,7 @@ export function Portfolio() {
               <AppWindow className="w-4 h-4" /> Applications
             </Button>
             <Button
-              variant={filter === "website" ? "primary" : "ghost"}
+
               size="sm"
               onClick={() => setFilter("website")}
               className={`rounded-lg gap-2 cursor-pointer ${filter === "website" ? "bg-primary text-primary-foreground" : ""}`}
