@@ -56,7 +56,7 @@ export function Portfolio() {
   );
 
   return (
-    <section id="projects" className="py-24 px-4 sm:px-8">
+    <section id="projects" className="py-24 px-4 sm:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="space-y-4">
@@ -68,7 +68,7 @@ export function Portfolio() {
 
           <div className="flex gap-2 p-1 glass rounded-xl w-fit">
             <Button
-
+              variant="ghost"
               size="sm"
               onClick={() => setFilter("all")}
               className={`rounded-lg cursor-pointer ${filter === "all" ? "bg-primary text-primary-foreground" : ""}`}
@@ -76,7 +76,7 @@ export function Portfolio() {
               Tous
             </Button>
             <Button
-
+              variant="ghost"
               size="sm"
               onClick={() => setFilter("app")}
               className={`rounded-lg gap-2 cursor-pointer ${filter === "app" ? "bg-primary text-primary-foreground" : ""}`}
@@ -84,7 +84,7 @@ export function Portfolio() {
               <AppWindow className="w-4 h-4" /> Applications
             </Button>
             <Button
-
+              variant="ghost"
               size="sm"
               onClick={() => setFilter("website")}
               className={`rounded-lg gap-2 cursor-pointer ${filter === "website" ? "bg-primary text-primary-foreground" : ""}`}

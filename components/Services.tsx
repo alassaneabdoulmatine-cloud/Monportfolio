@@ -53,7 +53,7 @@ const services = [
  */
 export function Services() {
   return (
-    <section id="services" className="py-10 px-4 sm:px-8 bg-black/20">
+    <section id="services" className="py-10 px-4 sm:px-8 bg-black/20 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-3xl sm:text-5xl font-bold">Mes Services</h2>

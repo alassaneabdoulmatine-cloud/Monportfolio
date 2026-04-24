@@ -18,7 +18,7 @@ export function About() {
 
   return (
     <section id="about" className="py-24 px-4 sm:px-8 bg-black/20 relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-accent/10 blur-[120px] rounded-full -z-10" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full max-w-96 h-96 bg-accent/10 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 space-y-8">
@@ -47,7 +47,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2 relative w-[30rem] h-[40rem]">
+        <div className="order-1 lg:order-2 relative w-full max-w-[30rem] mx-auto lg:mx-0">
           <div className="relative z-10 rounded-2xl overflow-hidden glass p-4 aspect-[4/5]">
             <img
               src="/assets/profile.jpg"
@@ -56,7 +56,7 @@ export function About() {
             />
           </div>
           {/* Decorative background for the image */}
-          <div className="absolute -inset-4 bg-linear-to-tr from-primary/20 to-accent/20 blur-2xl -z-10 rounded-2xl" />
+          <div className="absolute sm:-inset-4 -inset-2 bg-linear-to-tr from-primary/20 to-accent/20 blur-2xl -z-10 rounded-2xl" />
         </div>
       </div>
     </section>

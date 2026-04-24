@@ -28,7 +28,7 @@ export function Hero() {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
+        <h1 className="text-6xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
           Crée des applications métier et SaaS <br />
           <span className="text-gradient italic">sur-mesure pour les PME et les startups</span>
         </h1>

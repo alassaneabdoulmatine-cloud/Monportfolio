@@ -21,7 +21,7 @@ const techStack = [
  */
 export function Stack() {
   return (
-    <section className="py-20 px-4 sm:px-8 overflow-hidden">
+    <section className="px-4 sm:px-8 ">
       <div className="max-w-7xl mx-auto">
         <div className="glass rounded-2xl p-8 sm:p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl -z-10" />

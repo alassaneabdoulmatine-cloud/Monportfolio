@@ -38,7 +38,6 @@ export default function Home() {
       <Testimonials />
       <ContactCTA />
 
-
       {/* Footer simple */}
       <footer className="py-12 px-4 sm:px-8 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-muted-foreground text-sm">
