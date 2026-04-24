@@ -15,7 +15,7 @@ export function Hero() {
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 blur-[120px] rounded-full -z-10" />
 
-      <div className="max-w-4xl mx-auto space-y-10">
+      <div className="max-w-4xl mx-auto space-y-8">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-white/10 text-muted-foreground text-xs font-medium tracking-wide animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <span>Applications métiers</span>
@@ -28,7 +28,7 @@ export function Hero() {
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
+        <h1 className="text-xl sm:text-5xl font-bold leading-[1.1] tracking-tight">
           Crée des applications métier et SaaS <br />
           <span className="text-gradient italic">sur-mesure pour les PME et les startups</span>
         </h1>
@@ -40,7 +40,7 @@ export function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <ContactButton size="lg" showIcon className="rounded-xl px-8 h-12 text-base glow-primary">
             Discuter de votre projet
           </ContactButton>
