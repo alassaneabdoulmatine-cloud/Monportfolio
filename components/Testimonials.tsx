@@ -32,7 +32,7 @@ const testimonials = [
  */
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 overflow-hidden bg-black/10">
+    <section id="testimonials" className="py-16 overflow-hidden bg-black/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 mb-16 text-center space-y-4">
         <h2 className="text-3xl sm:text-5xl font-bold italic">Résultats concrets</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -43,8 +43,8 @@ export function Testimonials() {
       <div className="relative flex">
         <div className="flex gap-8 animate-marquee whitespace-nowrap">
           {[...testimonials, ...testimonials].map((t, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="w-[350px] sm:w-[450px] glass p-8 rounded-2xl space-y-4 shrink-0 whitespace-normal group hover:border-primary/30 transition-colors"
             >
               <Quote className="w-8 h-8 text-primary/40 group-hover:text-primary transition-colors" />
