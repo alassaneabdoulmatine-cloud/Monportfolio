@@ -2,45 +2,47 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Code, Monitor, AppWindow } from "lucide-react";
+import { ExternalLink, Monitor, AppWindow } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
   {
-    title: "EcoTrack SaaS",
+    id: 1,
+    title: "Nexus CRM",
     category: "app",
-    description: "Plateforme de suivi d'empreinte carbone pour PME avec tableaux de bord analytiques en temps réel.",
-    tech: ["Next.js", "Supabase", "Prisma"],
-    image: "/api/placeholder/600/400",
+    description: "CRM de gestion de contact pour PME avec tableaux de bord analytiques en temps réel.",
+    tech: ["Next.js", "Supabase", "Prisma", "tanstack query"],
+    image: "/assets/nexuscrm.png",
+    link: "https://crm-gestion-de-contact.vercel.app",
   },
+
   {
-    title: "Nova AI Agent",
-    category: "app",
-    description: "Assistant virtuel intelligent capable de gérer le support client via des pipelines RAG personnalisés.",
-    tech: ["OpenAI", "Next.js", "PostgreSQL"],
-    image: "/api/placeholder/600/400",
-  },
-  {
-    title: "Zenith Real Estate",
+    id: 2,
+    title: "enord",
     category: "website",
-    description: "Landing page haute conversion pour un promoteur immobilier de luxe, optimisée pour le SEO.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    image: "/api/placeholder/600/400",
+    description: "Site web d'une agence vidéo qui répond à vos enjeux business.",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    image: "/assets/enord.png",
+    link: "https://enord.fr",
   },
   {
-    title: "Fintech Pro",
-    category: "app",
-    description: "Application de gestion de finances personnelles avec synchronisation bancaire sécurisée.",
-    tech: ["Next.js", "Supabase", "Auth.js"],
-    image: "/api/placeholder/600/400",
-  },
-  {
-    title: "Creatix Agency",
+    id: 3,
+    title: "lawlyfy",
     category: "website",
-    description: "Site vitrine dynamique pour une agence de design, avec des animations fluides et un score PageSpeed de 100.",
+    description: "Site vitrine dynamique pour une plateforme Des agents IA spécialisés, formés au droit kényan, pour vous aider dans vos démarches. Appréciés par plus de 500 avocats et cabinets juridiques utilisant nativement l’IA.",
     tech: ["Next.js", "Tailwind", "GSAP"],
-    image: "/api/placeholder/600/400",
+    image: "/assets/lawlyfy.png",
+    link: "https://lawlyfy.ai",
   },
+  {
+    id: 4,
+    title: "Mon Portfolio",
+    category: "website",
+    description: "Portfolio personnel de presentation de mes services et mes projets. ",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    image: "/assets/portfolio.png",
+    link: "https://monportfolio-ruddy.vercel.app",
+  }
 ];
 
 /**
@@ -95,21 +97,22 @@ export function Portfolio() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <div key={index} className="glass rounded-2xl overflow-hidden group">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="glass rounded-2xl overflow-hidden group">
               <div className="relative aspect-video overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                  <Button size="icon" variant="outline" className="rounded-full bg-white/10 border-white/20 hover:bg-primary transition-colors">
-                    <ExternalLink className="w-5 h-5" />
-                  </Button>
-                  <Button size="icon" variant="outline" className="rounded-full bg-white/10 border-white/20 hover:bg-primary transition-colors">
-                    <Code className="w-5 h-5" />
-                  </Button>
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="rounded-full px-6 bg-primary hover:bg-primary/90 transition-all scale-90 group-hover:scale-100 duration-300 cursor-pointer">
+                      Voir le projet <ExternalLink className="w-4 h-4 ml-2" />
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="p-6 space-y-4">

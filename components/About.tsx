@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 /**
  * About Section
@@ -49,10 +50,12 @@ export function About() {
 
         <div className="order-1 lg:order-2 relative w-full max-w-[30rem] mx-auto lg:mx-0">
           <div className="relative z-10 rounded-2xl overflow-hidden glass p-4 aspect-[4/5]">
-            <img
+            <Image
               src="/assets/profile.jpg"
               alt="Profile"
-              className="w-full h-full object-cover rounded-xl"
+              fill
+              className="object-cover rounded-xl"
+              priority
             />
           </div>
           {/* Decorative background for the image */}
