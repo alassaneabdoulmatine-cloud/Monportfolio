@@ -18,6 +18,16 @@ const projects = [
 
   {
     id: 2,
+    title: "quickcart",
+    category: "app",
+    description: "Plateforme de e-commerce pour les entreprises. Permet de vendre des produits en ligne.",
+    tech: ["Next.js", "postgresql", "Prisma", "tanstack query"],
+    image: "/assets/quickcart.png",
+    link: "https://quickcart.greatstack.in/",
+  },
+
+  {
+    id: 3,
     title: "Nexus CRM",
     category: "app",
     description: "CRM de gestion de contact pour PME avec tableaux de bord analytiques en temps réel.",
@@ -27,7 +37,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "enord",
     category: "website",
     description: "Site web d'une agence vidéo qui répond à vos enjeux business.",
@@ -36,7 +46,7 @@ const projects = [
     link: "https://enord.fr",
   },
   {
-    id: 4,
+    id: 5,
     title: "lawlyfy",
     category: "website",
     description: "Site vitrine dynamique pour une plateforme Des agents IA spécialisés, formés au droit kényan, pour vous aider dans vos démarches. Appréciés par plus de 500 avocats et cabinets juridiques utilisant nativement l’IA.",
@@ -45,7 +55,7 @@ const projects = [
     link: "https://lawlyfy.ai",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mon Portfolio",
     category: "website",
     description: "Portfolio personnel de presentation de mes services et mes projets. ",
