@@ -8,6 +8,16 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
+    title: "project-management",
+    category: "app",
+    description: "Application de gestion de projet pour les équipes. Permet de suivre les tâches, les échéances et les progrès de l'équipe.",
+    tech: ["Next.js", "postgresql", "Prisma", "tanstack query"],
+    image: "/assets/project-management.png",
+    link: "https://project-management-gs.vercel.app/",
+  },
+
+  {
+    id: 2,
     title: "Nexus CRM",
     category: "app",
     description: "CRM de gestion de contact pour PME avec tableaux de bord analytiques en temps réel.",
@@ -17,7 +27,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "enord",
     category: "website",
     description: "Site web d'une agence vidéo qui répond à vos enjeux business.",
@@ -26,7 +36,7 @@ const projects = [
     link: "https://enord.fr",
   },
   {
-    id: 3,
+    id: 4,
     title: "lawlyfy",
     category: "website",
     description: "Site vitrine dynamique pour une plateforme Des agents IA spécialisés, formés au droit kényan, pour vous aider dans vos démarches. Appréciés par plus de 500 avocats et cabinets juridiques utilisant nativement l’IA.",
@@ -35,7 +45,7 @@ const projects = [
     link: "https://lawlyfy.ai",
   },
   {
-    id: 4,
+    id: 5,
     title: "Mon Portfolio",
     category: "website",
     description: "Portfolio personnel de presentation de mes services et mes projets. ",
