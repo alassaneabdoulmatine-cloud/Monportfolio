@@ -1,6 +1,7 @@
 "use client";
 
 import { Layout, Smartphone, Globe, Bot, ShieldCheck, Zap } from "lucide-react";
+import { motion } from "motion/react";
 
 const services = [
   {
@@ -53,19 +54,50 @@ const services = [
  */
 export function Services() {
   return (
-    <section id="services" className="py-10 px-4 sm:px-8 bg-black/20 overflow-hidden">
+    <section id="services" className="py-24 px-4 sm:px-8 bg-black/20 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-5xl font-bold">Mes Services</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center space-y-4"
+        >
+          <h2 className="text-3xl sm:text-6xl font-bold italic">Mes Services</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Des solutions techniques de pointe pour propulser votre entreprise dans l'ère numérique.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    ease: "easeOut",
+                  },
+                },
+              }}
               className="glass p-8 rounded-2xl group hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className={`w-14 h-14 ${service.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -75,9 +107,9 @@ export function Services() {
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

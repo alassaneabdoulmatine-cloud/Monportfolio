@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "motion/react";
+
 const techStack = [
   { name: "Next.js", level: "Maîtrisé" },
   { name: "React", level: "Maîtrisé" },
@@ -21,27 +23,62 @@ const techStack = [
  */
 export function Stack() {
   return (
-    <section className="px-4 sm:px-8 ">
+    <section className="py-24 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="glass rounded-2xl p-8 sm:p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl -z-10" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="glass rounded-3xl p-8 sm:p-16 relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[120px] -z-10" />
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="space-y-4 text-center md:text-left">
-              <h2 className="text-3xl font-bold italic">Ma Stack Technique</h2>
-              <p className="text-muted-foreground">Les outils que j'utilise pour bâtir des produits d'exception.</p>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="space-y-6 text-center lg:text-left max-w-md">
+              <h2 className="text-3xl sm:text-5xl font-bold italic">Ma Stack Technique</h2>
+              <p className="text-muted-foreground text-lg">Les outils que j'utilise pour bâtir des produits d'exception, performants et évolutifs.</p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.05,
+                  },
+                },
+              }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full lg:w-auto"
+            >
               {techStack.map((tech) => (
-                <div key={tech.name} className="px-6 py-4 glass rounded-xl text-center group hover:bg-primary/5 transition-colors">
-                  <p className="font-bold whitespace-nowrap">{tech.name}</p>
-                  <p className="text-[10px] text-primary uppercase tracking-widest mt-1 opacity-70">{tech.level}</p>
-                </div>
+                <motion.div
+                  key={tech.name}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8 },
+                    visible: {
+                      opacity: 1,
+                      scale: 1,
+                      transition: {
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 10,
+                      },
+                    },
+                  }}
+                  className="px-6 py-5 glass rounded-2xl text-center group hover:bg-primary/5 transition-all duration-300 border border-white/5 hover:border-primary/20"
+                >
+                  <p className="font-bold whitespace-nowrap text-white">{tech.name}</p>
+                  <p className="text-[10px] text-primary uppercase tracking-widest mt-1.5 font-semibold opacity-80">{tech.level}</p>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
