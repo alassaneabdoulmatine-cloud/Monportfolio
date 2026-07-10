@@ -35,7 +35,7 @@ export default function Home() {
       <Portfolio />
       <Stack />
       <About />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactCTA />
 
       {/* Footer simple */}

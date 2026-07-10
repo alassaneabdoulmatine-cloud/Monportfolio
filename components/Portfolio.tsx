@@ -27,43 +27,7 @@ const projects = [
     link: "https://quickcart.greatstack.in/",
   },
 
-  {
-    id: 3,
-    title: "Nexus CRM",
-    category: "app",
-    description: "CRM de gestion de contact pour PME avec tableaux de bord analytiques en temps réel.",
-    tech: ["Next.js", "Supabase", "Prisma", "tanstack query"],
-    image: "/assets/nexuscrm.png",
-    link: "https://crm-gestion-de-contact.vercel.app",
-  },
-
-  {
-    id: 4,
-    title: "enord",
-    category: "website",
-    description: "Site web d'une agence vidéo qui répond à vos enjeux business.",
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/assets/enord.png",
-    link: "https://enord.fr",
-  },
-  {
-    id: 5,
-    title: "lawlyfy",
-    category: "website",
-    description: "Site vitrine dynamique pour une plateforme Des agents IA spécialisés, formés au droit kényan, pour vous aider dans vos démarches. Appréciés par plus de 500 avocats et cabinets juridiques utilisant nativement l’IA.",
-    tech: ["Next.js", "Tailwind", "GSAP"],
-    image: "/assets/lawlyfy.png",
-    link: "https://lawlyfy.ai",
-  },
-  {
-    id: 6,
-    title: "Mon Portfolio",
-    category: "website",
-    description: "Portfolio personnel de presentation de mes services et mes projets. ",
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/assets/portfolio.png",
-    link: "https://monportfolio-ruddy.vercel.app",
-  }
+  
 ];
 
 /**
